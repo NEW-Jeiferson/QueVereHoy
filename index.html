@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta de Películas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1>¿Qué veo hoy?</h1>
+            <p>Elige un género y presiona el botón para descubrir tu película</p>
+        </header>
+
+        <section class="controles">
+            <select id="select-genero">
+                <option value="28">Acción</option>
+                <option value="35">Comedia</option>
+                <option value="27">Terror</option>
+                <option value="878">Ciencia Ficción</option>
+                <option value="10749">Romance</option>
+                <option value="16">Animación</option>
+            </select>
+
+            <button id="btn-girar">Girar la Ruleta</button>
+        </section>
+
+        <footer>
+            <p>Evitamos que dures 45 minutos eligiendo qué ver en Netflix</p>
+        </footer>
+    </main>
+
+
+    <dialog id="modal-pelicula">
+        <button id="btn-cerrar" type="button">&times;</button>
+        
+        <div class="modal-contenido">
+            <div class="video-container">
+                <iframe id="peli-trailer" src="" title="Tráiler de la película" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="info-modal">
+                <img id="peli-poster" src="" alt="Póster de la película" style="display: none;">
+                
+                <div class="detalles-texto">
+                    <h2 id="peli-titulo"></h2>
+                    <span id="peli-rating"></span>
+                    <p id="peli-overview"></p>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
